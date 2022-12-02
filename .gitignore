@@ -1,4 +1,4 @@
-#Ignore all Executable files
+#Ignore all Executable files. in Linux executables do not have extensions. Below code tells git to ignore extension less files.
 *
 !*.*
 !*/
