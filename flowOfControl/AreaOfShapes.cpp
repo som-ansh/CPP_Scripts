@@ -17,7 +17,7 @@ int main()
     cout<<"Enter your choice\n";
     cin>>choice;
 
-    switch(choice)             //switch-case starts
+    switch(choice)             //switch-case starts. Put most common cases first to optimize the code.
     {
         case 1 : float radius;
                  cout<<"Enter Radius of circle: ";
