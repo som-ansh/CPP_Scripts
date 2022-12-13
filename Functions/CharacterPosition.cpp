@@ -8,7 +8,7 @@ int main()
     char ch;
     int y=0;
     cout<<"Enter the string: \n";
-    getline(cin,s);
+    getline(cin,s);                                      //getline is for string data type. cin.getline is for array of characters.
     cout<<"\n Enter the chracter to be searched for: \n";
     cin>>ch;
     y = findposition(s,ch);
@@ -21,9 +21,9 @@ int main()
 int findposition(string s, char ch)
 {
     int flag = -1;
-    for(int i = 0; i<s.length() ; i++ )
+    for(int i = 0; i<s.length() ; i++ )           //s.length() returns the length of string including whitespace.
        {
-        if(s.at(i) == ch)
+        if(s.at(i) == ch)                         //s.at(i)  return the character at position i of the string.
            {
             flag = 0;
             cout<<"\n The character is in the string at position "<<i+1;
