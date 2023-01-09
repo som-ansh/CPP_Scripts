@@ -17,7 +17,7 @@ int main()
 
 }
 
-void ReplaceByHyphen(char str[80])
+void ReplaceByHyphen(char str[])
 {
     int i,len;
 
