@@ -1,39 +1,37 @@
-//Program to check if a string is a palindrome or not. Using string as Character of arrays.
+// Program to check if a string is a palindrome or not. Using string as Character of arrays.
 
-#include<iostream>
+#include <iostream>
+#include <stdio.h>
 using namespace std;
 
-
 int main()
+{ 
+  void TestPalindrome(char[]);
+  char str[80];
+  cout<<"Enter the string to check whether its palindrome!";
+  cin.getline(str,80);
+  TestPalindrome(str);
+  return 0;
+}
+
+void TestPalindrome(char str[80])
 {
-    int size,len;
-    cout<<"Enter the max length of the string : ";
-    cin>>size;
-    char str[size];
-    cout<<"Enter your string :";
-    cin.getline(str,size);
-    
+  int i,j,flag=-1,len=0;
 
-    for(len = 0; str[len] != '\0' ; len++);  //to find length of the string.
+  for(len=0;str[len] != '\0'; len++);     //to obtain length of the string
 
-    int i,j,flag = -1;
-
-    for(i=0,j=len-1; i<len/2 ; i++,j--)
+  for(i=0,j=len-1; i<len/2; i++,j--)      //i sits at beginning of string and j sits at end of the string
+  {
+    if(str[i] != str[j])
     {
-        if(str[i] != str[j])
-        {
-            flag = 0;
-            break;
-        }
-          
+      flag = 0;
+      break;      
     }
+     
+  }
 
-    if(flag == 0)
-      cout<<"The given string is not a PALINDROME";
-    else
-      cout<<"The given string is a PALINDROME";
-    return 0;
-
-
-   
+  if(flag == 0)
+    cout<<"The given string is not a Palindrome";
+  else
+    cout<<"The given string is a Palindrome";
 }
